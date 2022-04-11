@@ -2,8 +2,17 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import useSWR from 'swr'
+import {fetcher} from '../utils/fetcher'
+import { useEffect } from 'react'
 
 const Home: NextPage = () => {
+  const { data, error } = useSWR("/api/db", fetcher)
+
+  useEffect(() => {
+    console.log(data)
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
