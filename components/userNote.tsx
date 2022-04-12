@@ -7,7 +7,7 @@ import React, { FC } from 'react'
 const UserNote: FC = () => {
   return (
     <div className='py-4'>
-      <div className='shadow-lg group container  rounded-md bg-white  max-w-sm flex justify-center items-center  mx-auto content-div'>
+      <div className='shadow-lg group container rounded-md bg-white  max-w-sm flex justify-center items-center  mx-auto content-div'>
         <div>
           <div className='py-8 px-4 bg-white  rounded-b-md fd-cl'>
             <span className='block text-lg text-gray-800 font-bold tracking-wide'>
