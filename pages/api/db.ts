@@ -6,7 +6,7 @@ console.log('Connected to PlanetScale!');
 
   connection.connect(function(err: any) {
     if (err) throw err;
-    connection.query("SELECT * FROM links", function (err: any, result: any, fields: any) {
+    connection.query("SELECT * FROM links WHERE id < 15", function (err: any, result: any, fields: any) {
       if (err) throw err;
       console.log(result);
       res.status(200).json(result)

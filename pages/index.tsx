@@ -9,10 +9,13 @@ import Header from '../components/Nav'
 // import Table from '../components/Table'
 import UserNote from '../components/userNote'
 import Footer from '../components/footer'
+import Error from '../components/error'
 
 const Home: NextPage = () => {
   const { data, error } = useSWR('/api/db', fetcher)
 
+  //Display an error if no response/data is returned from the server
+  const len: number = data?.length || 0; 
   // useEffect(() => {
   //   console.log(data)
   // }, [])
@@ -26,9 +29,8 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       {/* <Table data={data} /> */}
-      {/* error logic */}
-      <UserNote />
 
+      <UserNote />
       <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
         <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
           <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
@@ -45,15 +47,12 @@ const Home: NextPage = () => {
               <th scope='col' className='px-6 py-3'>
                 Link
               </th>
-              {/* <th scope='col' className='px-6 py-3'>
-              <span className='sr-only'>Category</span>
-            </th> */}
             </tr>
           </thead>
 
           <tbody>
             {data?.map((item: any, index: number) => {
-              const { id, name, link, details, type, tags } = item
+              const { id, name, link, details, type } = item
               return (
                 <tr
                   key={`${index}${name.split('').join()}${id}`}
@@ -81,6 +80,8 @@ const Home: NextPage = () => {
             })}
           </tbody>
         </table>
+        {/* Error message if there is a problem  */}
+        {len < 1 ? <Error /> : null}
       </div>
 
       {/* <footer className={styles.footer}>

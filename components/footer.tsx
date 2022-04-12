@@ -7,7 +7,7 @@ import { fetcher } from '../utils/fetcher'
 import { useEffect } from 'react'
 import React, { FC, ReactElement } from 'react'
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className='text-center text-white'>
       <div className='container pt-9'>
