@@ -35,7 +35,7 @@ const Table: FC = (data) => {
               scope='row'
               className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'
             >
-              Apple MacBook Pro 17"
+              Apple MacBook Pro 17
             </th>
             <td className='px-6 py-4'>Sliver</td>
             <td className='px-6 py-4'>Laptop</td>

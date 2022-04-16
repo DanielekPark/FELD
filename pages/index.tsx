@@ -70,6 +70,7 @@ const Home: NextPage = () => {
                     <a
                       href={`${link}`}
                       target='_blank'
+                      rel="noreferrer"
                       className='font-medium text-blue-600 dark:text-blue-500 hover:underline'
                     >
                       Site
