@@ -7,7 +7,7 @@ import Error from '../components/error'
 import Nav from '../components/Nav'
 import { useRouter } from 'next/router'
 
-const searchLinks = () => {
+const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
   const [results, setResults] = useState<any[]>([])
   const inputValue =  useRef<HTMLInputElement>(null)
@@ -37,9 +37,10 @@ const searchLinks = () => {
     
   }
 
-  useEffect(() => {
-    console.log(router)
-  }, [])
+  // useEffect(() => {
+  //   console.log(router)
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [])
     
 
   return (
@@ -94,4 +95,4 @@ const searchLinks = () => {
     </>
   )
 }
-export default searchLinks
+export default SearchLinks

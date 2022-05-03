@@ -7,7 +7,7 @@ import Nav from '../../components/Nav'
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
 
-const searchLinks = () => {
+const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
   const [results, setResults] = useState<any[]>([])
   const router = useRouter()
@@ -49,6 +49,7 @@ const searchLinks = () => {
 
   useEffect(() => {
     fetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -103,7 +104,7 @@ const searchLinks = () => {
     </>
   )
 }
-export default searchLinks
+export default SearchLinks
 //Create layout component
 //https://medium.com/nextjs/how-to-build-a-layout-in-nextjs-80d28d571673
 
