@@ -56,12 +56,12 @@ const Nav: FC = () => {
             Find a tool
           </a>
           </Link>
-          <Link href='/newLink'>
+          {/* <Link href='/newLink'>
           <a
             className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'
           >
             Submit a new link
-          </a></Link>          
+          </a></Link>           */}
         </div>
       </div>
     </nav>
