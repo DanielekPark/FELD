@@ -15,6 +15,42 @@ export default function Demo() {
           </h2>
         </div>
         <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
+
+          <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
+            <div className='flex justify-around mt-2'>
+              <div className='flex-shrink-0'>
+                <div className='star block mx-auto w-16 h-16 bg-amber-300' />
+              </div>
+              <div className='flex-shrink-0 space-around'>
+                <div className='message block mx-auto w-16 h-16 bg-teal-400' />
+              </div>
+              <div className='flex-shrink-0 space-around'>
+                <div className='frame block mx-auto w-16 h-16 bg-violet-900' />
+              </div>
+            </div>
+            <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
+              <div className='flex-1'>
+                <p className='text-sm font-medium text-blue-600'>
+                  <a
+                    href='https://doodad.dev/pattern-generator/'
+                    target='_blank'
+                    rel='noreferrer'
+                    className='hover:underline'
+                  >
+                    Try it
+                  </a>
+                </p>
+              </div>
+              <div className='mt-3 flex items-center'>
+                <div className='ml-3'>
+                  <p className='text-sm font-medium text-gray-900'>
+                    This example shown is not an SVG, its HTML and CSS. Clippy is a tool for generating values for shape functions for the new and cool CSS clip-path property. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
             {/* relative */}
             <div className='flex-shrink-0 mx-auto flip'>
@@ -43,6 +79,7 @@ export default function Demo() {
               </div>
             </div>
           </div>
+
           <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
             <div className='flex-shrink-0'>
               <svg height='100%' width='100%'>
@@ -97,40 +134,6 @@ export default function Demo() {
             </div>
           </div>
 
-          <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
-            <div className='flex justify-around mt-2'>
-              <div className='flex-shrink-0'>
-                <div className='star block mx-auto w-16 h-16 bg-amber-300' />
-              </div>
-              <div className='flex-shrink-0 space-around'>
-                <div className='message block mx-auto w-16 h-16 bg-teal-400' />
-              </div>
-              <div className='flex-shrink-0 space-around'>
-                <div className='frame block mx-auto w-16 h-16 bg-violet-900' />
-              </div>
-            </div>
-            <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
-              <div className='flex-1'>
-                <p className='text-sm font-medium text-blue-600'>
-                  <a
-                    href='https://doodad.dev/pattern-generator/'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='hover:underline'
-                  >
-                    Try it
-                  </a>
-                </p>
-              </div>
-              <div className='mt-3 flex items-center'>
-                <div className='ml-3'>
-                  <p className='text-sm font-medium text-gray-900'>
-                    This example shown is not an SVG, its HTML and CSS. Clippy is a tool for generating values for shape functions for the new and cool CSS clip-path property. 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
