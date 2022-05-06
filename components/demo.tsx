@@ -136,4 +136,3 @@ export default function Demo() {
     </div>
   )
 }
-// https://ordinarycoders.com/blog/article/17-tailwindcss-cards

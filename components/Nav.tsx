@@ -12,9 +12,12 @@ const Nav: FC = () => {
   return (
     <nav className='flex items-center justify-between flex-wrap bg-sky-400 p-6'>
       <div className='flex items-center flex-shrink-0 text-white mr-6'>
-        <span className='font-semibold text-xl tracking-tight'>
-          Tool Finder
-        </span>
+        <Link href='/index'>
+          <span className='font-semibold text-xl tracking-tight cursor-pointer'>
+            Tool Finder
+          </span>        
+        </Link>
+
       </div>
       <div className='block lg:hidden'>
         {/* <button className='flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white'>

@@ -2,7 +2,6 @@
 const mysql = require('mysql')
 
 export default function handler(req: any, res: any) {
-  //const { pid } = req.query
 
   type Data = {
     name: string
@@ -13,11 +12,16 @@ export default function handler(req: any, res: any) {
   connection.connect(function (err: any) {
     if (err) throw err
         const {query, method} = req
-        console.log(query, method, 'request')    
-    connection.query(
-      `SELECT * FROM links WHERE type = '${query.id}'`,
-      function (err: any, result: any, fields: any) {
+        const searchTags = query.id
+          .split(' ')
+          .map((item: string) => `"%${item}%" or tags like `)
+          .join('')
+          .slice(0, -13)
 
+    connection.query(
+      `SELECT * FROM links WHERE tags like ${searchTags}`,
+      function (err: any, result: any, fields: any) {
+        console.log('search results:', searchTags) 
         if (err) throw err
         console.log(result)
         res.status(200).json(result)
@@ -27,3 +31,8 @@ export default function handler(req: any, res: any) {
 
   // connection.end();
 }
+/* 
+  select * from links where tags like '%svg%' or tags like '%css%';
+
+  Optimize code for routing when going to [id].tsx page
+*/
