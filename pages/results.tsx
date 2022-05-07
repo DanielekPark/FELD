@@ -11,12 +11,9 @@ const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
   const [results, setResults] = useState<any[]>([])
   const router = useRouter()
-  const { query, asPath } = router
+  const { query } = router
   const { id } = query
 
-  //when enter or click is pressed send go to links page with id
-  //put the search near the top
-  //put the value in query parameters
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
   }   
@@ -27,43 +24,18 @@ const SearchLinks = () => {
   }
 
   const search = () => {
-    // e.preventDefault()
-    // const input = e.target as typeof e.target & {
-    //   value: string
-    // 
     if(searchItem.length < 1) return
 
     const encoded = encodeURIComponent(searchItem)
     router.push(
       {
-        pathname: `/results/${encoded}`,
+        pathname: `/results/`,
         query: {tags: encoded}
       },
       undefined,
       {shallow: true}
     )
   }  
-  
-  // const fetchData = async () => {
-  //   try {
-  //     if (!id) return
-  //     const res = await fetch(`/api/results/${id}`)
-  //     const data = await res.json()
-  //     setResults(data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-  
-  // useEffect(() => {
-  //   fetchData()
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
-
-  // useEffect(() => {
-  //   console.log(router)
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
 
   return (
     <>

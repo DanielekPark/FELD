@@ -11,19 +11,22 @@ export default function handler(req: any, res: any) {
 
   connection.connect(function (err: any) {
     if (err) throw err
-        const {query, method} = req
-        const searchTags = query.id
-          .split(' ')
-          .map((item: string) => `"%${item}%" or tags like `)
+        const {query} = req
+        const searchTags: string[] = query.id.split(' ')
+        const tagsLength = searchTags.length
+        const tags = searchTags.map((tag: string, index: number) => {
+          if(index === tagsLength -1){
+            return tag
+          }
+          return `"%${tag}%" or tags like `
+        })  
           .join('')
-          .slice(0, -13)
-
     connection.query(
-      `SELECT * FROM links WHERE tags like ${searchTags}`,
+      `SELECT * FROM links WHERE tags like ${tags}`,
       function (err: any, result: any, fields: any) {
-        console.log('search results:', searchTags) 
+        console.log('search results:', searchTags, tagsLength) 
         if (err) throw err
-        console.log(result)
+        console.log(tags)
         res.status(200).json(result)
       }
     )
