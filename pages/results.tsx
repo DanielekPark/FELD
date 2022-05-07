@@ -29,7 +29,7 @@ const SearchLinks = () => {
     const encoded = encodeURIComponent(searchItem)
     router.push(
       {
-        pathname: `/results/`,
+        pathname: `/results/${encoded}`,
         query: {tags: encoded}
       },
       undefined,

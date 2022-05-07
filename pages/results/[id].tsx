@@ -22,10 +22,6 @@ const SearchLinks = () => {
   }
 
   const search = () => {
-    // e.preventDefault()
-    // const input = e.target as typeof e.target & {
-    //   value: string
-    //
     if (searchItem.length < 1) return
 
     //ENCODE URL
@@ -45,22 +41,6 @@ const SearchLinks = () => {
     setSearchItem(input)
   }
 
-  // const fetchData = async () => {
-  //   try {
-  //     if(!id) return
-  //     const res = await fetch(`/api/results/${id}`)
-  //     const data = await res.json()
-  //     setResults(data)
-  //   }catch(err){
-  //     console.log(err)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   fetchData()
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
-
   return (
     <>
       <Nav />
@@ -70,7 +50,7 @@ const SearchLinks = () => {
             <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               Find a link
             </h2>
-            <p className='mt-4 text-lg leading-6 text-gray-500'>Results</p>
+            <p className='mt-4 text-lg leading-6 text-gray-500'>{/*error ? 'No results' : `${data?.length} results`*/}Results</p>
           </div>
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
@@ -160,7 +140,8 @@ const SearchLinks = () => {
           {/* Error message if there is a problem  */}
         </div>
       ) : (
-        <Error />
+        // <Error />
+        null
       )}
       <Footer />
     </>
@@ -168,28 +149,5 @@ const SearchLinks = () => {
 }
 export default SearchLinks
 
-// const handleChange = (e: React.ChangeEvent) => {
-//   e.preventDefault()
-//   const input = e.target as typeof e.target & {
-//     value: string
-//   }
-
-//   if(input.value.length < 1) return
-
-//   if(e.key === 'Enter'){
-//     const searchVal = input.value
-//     const encoded = encodeURIComponent(searchVal)
-//     router.push(
-//       {
-//         pathname: `/results/${encoded}`,
-//         query: {tags: encoded}
-//       },
-//       undefined,
-//       {shallow: true}
-//     )
-//   }
-// }
 //Create layout component
 //https://medium.com/nextjs/how-to-build-a-layout-in-nextjs-80d28d571673
-
-//fix the query string format
