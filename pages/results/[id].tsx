@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import useSWR from 'swr'
 import React, { useState, useEffect, FC, useRef } from 'react'
 import Footer from '../../components/footer'
-// import Error from '../components/error'
 import Nav from '../../components/Nav'
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
@@ -43,14 +42,15 @@ const SearchLinks = () => {
 
   return (
     <>
-      <Nav />
       <div className='bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24'>
         <div className='relative max-w-xl mx-auto'>
           <div className='text-center'>
             <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               Find a link
             </h2>
-            <p className='mt-4 text-lg leading-6 text-gray-500'>{/*error ? 'No results' : `${data?.length} results`*/}Results</p>
+            <p className='mt-4 text-lg leading-6 text-gray-500'>
+              {/*error ? 'No results' : `${data?.length} results`*/}Results
+            </p>
           </div>
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
@@ -139,15 +139,9 @@ const SearchLinks = () => {
           </table>
           {/* Error message if there is a problem  */}
         </div>
-      ) : (
-        // <Error />
-        null
-      )}
-      <Footer />
+      ) : // <Error />
+      null}
     </>
   )
 }
 export default SearchLinks
-
-//Create layout component
-//https://medium.com/nextjs/how-to-build-a-layout-in-nextjs-80d28d571673
