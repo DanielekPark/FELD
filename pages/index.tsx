@@ -71,18 +71,9 @@ const Home: NextPage = () => {
           </tbody>
         </table>
         {/* Error message if there is a problem  */}
-        {len < 1 ? <Error /> : null}
       </div>
     </div>
   )
 }
 
-
 export default Home
-/*
-https://nextjs.org/docs/routing/dynamic-routes
-https://nextjs.org/learn/basics/data-fetching/two-forms
-https://nextjs.org/docs/basic-features/data-fetching/client-side
-https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
-https://github.com/vercel/next.js/tree/canary/examples/api-routes-rest/pages
-*/

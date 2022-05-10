@@ -32,7 +32,7 @@ export default function Demo() {
               <div className='flex-1'>
                 <p className='text-sm font-medium text-blue-600'>
                   <a
-                    href='https://doodad.dev/pattern-generator/'
+                    href='https://bennettfeely.com/clippy/'
                     target='_blank'
                     rel='noreferrer'
                     className='hover:underline'
@@ -60,7 +60,7 @@ export default function Demo() {
               <div className='flex-1'>
                 <p className='text-sm font-medium text-blue-600'>
                   <a
-                    href='https://doodad.dev/pattern-generator/'
+                    href='https://animista.net/#:~:text=Animista%20is%20a%20place%20where,those%20you%20will%20actually%20use.'
                     target='_blank'
                     rel='noreferrer'
                     className='hover:underline'
