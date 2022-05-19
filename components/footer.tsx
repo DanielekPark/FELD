@@ -4,8 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useSWR from 'swr'
 import { fetcher } from '../utils/fetcher'
-import { useEffect } from 'react'
-import React, { FC, ReactElement } from 'react'
+import React, { FC, ReactElement, useEffect} from 'react'
 
 const Footer: FC = () => {
   return (
