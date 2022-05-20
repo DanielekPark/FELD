@@ -3,23 +3,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { FC, Fragment } from 'react'
+import Searchbar from './searchbar'
 
 const UserNote: FC = () => {
   return (
     <>
       <div className='relative bg-white overflow-hidden'>
         <div className='max-w-7xl mx-auto'>
-          <div className='relative z-10 pb-8 bg-white sm:pb-8 md:pb-10 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
-            <svg
-              className='hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2'
-              fill='currentColor'
-              viewBox='0 0 100 100'
-              preserveAspectRatio='none'
-              aria-hidden='true'
-            >
-              <polygon points='50,0 100,0 50,100 0,100' />
-            </svg>
-            <section className='mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28'>
+          <div className='pb-4 bg-white sm:pb-8 md:pb-10 lg:w-full lg:pb-10'>
+            <section className='lg:flex mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28'>
               <div className='sm:text-center lg:text-left'>
                 <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
                   <span className='block xl:inline'>Find a tool</span>
@@ -40,6 +32,9 @@ const UserNote: FC = () => {
                   </a>
                   . More to features are coming!
                 </p>
+              </div>
+              <div>
+                <Searchbar />
               </div>
             </section>
           </div>

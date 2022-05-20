@@ -39,6 +39,10 @@ const SearchLinks = () => {
     const input = e.currentTarget.value
     setSearchItem(input)
   }
+   
+  // useEffect(() => {
+  //   console.log(data)
+  // }, [])
 
   return (
     <>

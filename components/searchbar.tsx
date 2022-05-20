@@ -39,7 +39,7 @@ const Searchbar = () => {
 
   return (
     <>
-      <div className='bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24'>
+      <div className='bg-white px-4 sm:px-6 lg:px-8 lg:py-24'>
         <div className='relative max-w-xl mx-auto'>
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
@@ -54,7 +54,7 @@ const Searchbar = () => {
                   >
                     <input
                       type='text'
-                      className='px-4 py-2 w-80'
+                      className='px-4 py-2 sm:w-11/12 md:w-80'
                       placeholder='Search...'
                       onChange={(e) => handleChange(e)}
                       value={searchItem}
