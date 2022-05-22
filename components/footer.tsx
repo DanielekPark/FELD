@@ -10,6 +10,7 @@ const Footer: FC = () => {
             href='https://github.com/DanielekPark/feld'
             target='_blank'
             className='text-gray-800'
+            rel="noreferrer"
           >
             <svg
               aria-hidden='true'
