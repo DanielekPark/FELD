@@ -1,21 +1,15 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import useSWR from 'swr'
-import { fetcher } from '../utils/fetcher'
-import React, { FC, ReactElement, useEffect} from 'react'
+import React, { FC } from 'react'
 
 const Footer: FC = () => {
   return (
-    <footer className='text-center text-white'>
-      <div className='container pt-9'>
-        <div className='flex justify-center mb-9'>
+    <footer className='mt-6 sm:mt-12'>
+      <div className='mx-auto max-w-md py-8 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8'>
+        <div className='mt-4 flex justify-center space-x-6'>
           <a
             href='https://github.com/DanielekPark/feld'
-            className='text-gray-800'
             target='_blank'
-            rel="noreferrer"
+            className='text-gray-800'
           >
             <svg
               aria-hidden='true'
