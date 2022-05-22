@@ -39,7 +39,7 @@ const Searchbar = () => {
 
   return (
     <>
-      <div className='bg-white px-4 sm:px-6 lg:px-8 lg:py-24'>
+      <div className='bg-white px-4 sm:px-6 lg:px-8 lg:py-6'>
         <div className='relative max-w-xl mx-auto'>
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>

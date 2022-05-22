@@ -4,7 +4,7 @@ import dots from '/public/dots.jpeg'
 
 export default function Demo() {
   return (
-    <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+    <div className='relative pt-10 pb-20 px-4 sm:px-6 lg:pt-18 lg:pb-28 lg:px-8'>
       <div className='absolute inset-0'>
         <div className='bg-white h-1/3 sm:h-2/3' />
       </div>
@@ -29,8 +29,8 @@ export default function Demo() {
               </div>
             </div>
             <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
-              <div className='flex-1'>
-                <p className='text-sm font-medium text-blue-600'>
+              <div className='flex-1 flex flex-col'>
+                <p className='text-sm font-medium text-blue-600 mt-auto'>
                   <a
                     href='https://bennettfeely.com/clippy/'
                     target='_blank'
@@ -57,8 +57,8 @@ export default function Demo() {
                 <Image src={dots} alt="pattern" width={150} height={150} />
             </div>
             <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
-              <div className='flex-1'>
-                <p className='text-sm font-medium text-blue-600'>
+              <div className='flex-1 flex flex-col'>
+                <p className='text-sm font-medium text-blue-600 mt-auto'>
                   <a
                     href='https://animista.net/#:~:text=Animista%20is%20a%20place%20where,those%20you%20will%20actually%20use.'
                     target='_blank'
@@ -111,8 +111,8 @@ export default function Demo() {
               </svg>
             </div>
             <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
-              <div className='flex-1'>
-                <p className='text-sm font-medium text-blue-600'>
+              <div className='flex-1 flex flex-col'>
+                <p className='text-sm font-medium text-blue-600 mt-auto'>
                   <a
                     href='https://doodad.dev/pattern-generator/'
                     target='_blank'
