@@ -6,7 +6,7 @@ import Nav from '../../components/Nav'
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
 import Error from '../../components/error'
-
+import Card from '../../components/card'
 const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
   const [results, setResults] = useState<any[]>([])
@@ -39,7 +39,7 @@ const SearchLinks = () => {
     const input = e.currentTarget.value
     setSearchItem(input)
   }
-   
+
   // useEffect(() => {
   //   console.log(data)
   // }, [])
@@ -59,9 +59,6 @@ const SearchLinks = () => {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
               <div className='sm:col-span-2'>
-                {/* <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label> */}
                 <div className='flex items-center justify-center'>
                   <form
                     onSubmit={(e) => handleSubmit(e)}
@@ -96,6 +93,37 @@ const SearchLinks = () => {
         </div>
       </div>
       {/* RESULTS */}
+      <div className='bg-white'>
+        <div className='mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-8'>
+          <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
+            <div className='lg:col-span-3'>
+              <ul
+                role='list'
+                className='space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8'
+              >
+                {data ? 
+                  data?.map((item: any, index: number) => {
+                  const { id, name, link, details, type } = item
+                  return (
+                    <Card key={`${index}${name.split('').join('')}${id}`} 
+                    name={name}
+                    link={link}
+                    details={details}
+                    />
+                  )
+                })
+                  : 
+                null}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+/* 
       {data ? (
         <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
           <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
@@ -112,13 +140,12 @@ const SearchLinks = () => {
                 </th>
               </tr>
             </thead>
-
             <tbody>
               {data?.map((item: any, index: number) => {
                 const { id, name, link, details, type } = item
                 return (
+                  <React.Fragment key={`${index}${name.split('').join()}${id}`}>
                   <tr
-                    key={`${index}${name.split('').join()}${id}`}
                     className='border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700'
                   >
                     <th
@@ -137,15 +164,13 @@ const SearchLinks = () => {
                     <td className='px-6 py-4'>{type}</td>
                     <td className='px-6 py-4'>{details}</td>
                   </tr>
+                  </React.Fragment>
                 )
               })}
             </tbody>
           </table>
-          {/* Error message if there is a problem  */}
         </div>
       ) : // <Error />
       null}
-    </>
-  )
-}
+*/
 export default SearchLinks

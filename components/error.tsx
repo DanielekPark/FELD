@@ -28,4 +28,9 @@ const Error = () => {
   )
 }
 
+/* 
+404
+https://tailwindui.com/components/marketing/feedback/404-pages
+*/
+
 export default Error

@@ -6,6 +6,7 @@ import Footer from '../components/footer'
 import Error from '../components/error'
 import Nav from '../components/Nav'
 import { useRouter } from 'next/router'
+import Card from '../components/card'
 
 const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')

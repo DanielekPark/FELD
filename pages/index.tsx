@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <UserNote />
       {/* <Searchbar /> */}
       <Demo />
-      <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
+      {/*<div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
         <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
           <thead className='text-xs text-gray-700 uppercase '>
             <tr>
@@ -70,22 +70,9 @@ const Home: NextPage = () => {
             })}
           </tbody>
         </table>
-        {/* Error message if there is a problem  */}
-      </div>
+      </div>*/}
     </div>
   )
 }
 
 export default Home
-
-/* 
-heading
-https://tailwindui.com/components/marketing/sections/blog-sections 
-
-card
-https://tailwindui.com/components/marketing/sections/blog-sections
-https://tailwindui.com/components/marketing/sections/team-sections
-
-404
-https://tailwindui.com/components/marketing/feedback/404-pages
-*/
