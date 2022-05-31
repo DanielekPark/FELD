@@ -25,7 +25,7 @@ const Card: React.FC<Props> = ({ name, link, details }: Props) => {
           ></div>
         </div>
         <div className='text-lg leading-6 font-medium space-y-1'>
-          <a href={link} target='_blank' className='text-blue-500'>
+          <a href={link} target='_blank' rel="noreferrer" className='text-blue-500'>
             <h3>{name}</h3>
           </a>
           <p className='text-black-600'>{details}</p>
