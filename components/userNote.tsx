@@ -18,7 +18,7 @@ const UserNote: FC = () => {
           <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
             <span className='block xl:inline'>Find a tool</span>
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">Have a design or code need? Explore the links, from altering images or build a fullstack app without installing node. If you are the owner of the site or if a link is broken please contact me and I will remove it. Do you suggestion for a link? Send me a message on{' '} <a className='text-blue-600/100 font-bold' href='https://tally.so/r/w20ZVm' target='_blank' rel='noreferrer'>Tally </a> . More to features are coming!
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">Have a design or code need? Explore the links, from altering images or build a fullstack app without installing node. More to features are coming!
           </p>
           <Searchbar />
         </div>

@@ -10,10 +10,6 @@ import Demo from '../components/demo'
 import Searchbar from '../components/searchbar'
 
 const Home: NextPage = () => {
-  const { data, error } = useSWR('/api/db', fetcher)
-
-  //Display an error if no response/data is returned from the server
-  const len: number = data?.length || 0; 
 
   return (
     <div className={styles.container}>

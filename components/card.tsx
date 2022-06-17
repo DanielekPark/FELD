@@ -35,10 +35,4 @@ const Card: React.FC<Props> = ({ name, link, details }: Props) => {
   )
 }
 
-/* 
-card
-https://tailwindui.com/components/marketing/sections/blog-sections
-https://tailwindui.com/components/marketing/sections/team-sections
- */
-
 export default Card

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import dots from '/public/dots.jpeg'
+import dots from '/public/images/dots.jpeg'
 
 export default function Demo() {
   return (

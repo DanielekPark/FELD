@@ -10,65 +10,30 @@ import React, { FC, ReactElement } from 'react'
 
 const Nav: FC = () => {
   return (
-    <nav className='flex items-center justify-between flex-wrap bg-sky-400 p-6'>
+    <nav className='bg-sky-400 p-6'>
       <div className='flex items-center flex-shrink-0 text-white mr-6'>
         <Link href='/'>
           <span className='font-semibold text-xl tracking-tight cursor-pointer'>
             Tool Finder
-          </span>        
+          </span>
         </Link>
+      </div>
 
-      </div>
-      <div className='block lg:hidden'>
-        {/* <button className='flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white'>
-          <svg
-            className='fill-current h-3 w-3'
-            viewBox='0 0 20 20'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <title>Menu</title>
-            <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
-          </svg>
-        </button> */}
-      </div>
-      <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
-        <div className='text-sm lg:flex-grow'>
-          <a
-            href='#responsive-header'
-            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
-          >
-            Design
-          </a>
-          <a
-            href='#responsive-header'
-            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
-          >
-            Front-End
-          </a>
-          <a
-            href='#responsive-header'
-            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
-          >
-            Backend
-          </a>
-          <Link href='/results'>
-          <a
-            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'
-          >
-            Find a tool
-          </a>
+        <div className='mt-2 flex items-center space-x-4 overflow-y-auto whitespace-nowrap'>
+          <Link href='/layout'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              Layout
+            </a>
           </Link>
-          {/* <Link href='/newLink'>
-          <a
-            className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'
-          >
-            Submit a new link
-          </a></Link>           */}
+          <Link href='/contact'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              Contact
+            </a>
+          </Link>
+
         </div>
-      </div>
     </nav>
   )
 }
-
 
 export default Nav
