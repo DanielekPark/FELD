@@ -7,6 +7,8 @@ type Props = {
   details: string
 }
 
+
+//need to remove background gradient
 const Card: React.FC<Props> = ({ name, link, details }: Props) => {
   return (
     <li>

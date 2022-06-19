@@ -25,6 +25,11 @@ const Nav: FC = () => {
               Layout
             </a>
           </Link>
+          <Link href='/image'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              Image tools
+            </a>
+          </Link>
           <Link href='/contact'>
             <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
               Contact
