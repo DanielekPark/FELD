@@ -46,14 +46,15 @@ const SearchLinks = () => {
               {data?.map((item: any) => {
                 const { name, img, details, link } = item
                 return (
-                  <a
+                  <a 
+                  key={name}
                     href={link}
                     target='_blank'
                     rel='noreferrer'
                     className='block'
                   >
                     <div
-                      key={name}
+                      
                       className='flex flex-col rounded-lg shadow-lg bg-sky-400 text-white'
                     >
                       <h2 className='text-center'>{name}</h2>
