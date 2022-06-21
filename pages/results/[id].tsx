@@ -7,6 +7,10 @@ import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
 import Error from '../../components/error'
 import Card from '../../components/card'
+import Searchbar from '../../components/searchbar'
+import Image from 'next/image'
+import dots from '/public/images/dots.jpeg'
+
 const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
   const [results, setResults] = useState<any[]>([])
@@ -16,105 +20,57 @@ const SearchLinks = () => {
 
   const { data, error } = useSWR(`/api/results/${id}`, fetcher)
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-  }
-
-  const search = () => {
-    if (searchItem.length < 1) return
-
-    //ENCODE URL
-    const encoded = encodeURIComponent(searchItem)
-    router.push(
-      {
-        pathname: `/results/${encoded}`,
-        query: { tags: encoded },
-      },
-      undefined,
-      { shallow: true }
-    )
-  }
-
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const input = e.currentTarget.value
-    setSearchItem(input)
-  }
-
-  // useEffect(() => {
-  //   console.log(data)
-  // }, [])
-
   return (
     <>
-      <div className='bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24'>
-        <div className='relative max-w-xl mx-auto'>
+      <div className='relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-4 lg:px-8'>
+        <div className='absolute inset-0'>
+          <div className='bg-white h-1/3 sm:h-2/3' />
+        </div>
+        <div className='relative max-w-7xl mx-auto'>
           <div className='text-center'>
-            <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-              Find a link
-            </h2>
-            <p className='mt-4 text-lg leading-6 text-gray-500'>
-              {/*error ? 'No results' : `${data?.length} results`*/}Results
-            </p>
-          </div>
-          <div className='mt-12'>
-            <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
-              <div className='sm:col-span-2'>
-                <div className='flex items-center justify-center'>
-                  <form
-                    onSubmit={(e) => handleSubmit(e)}
-                    className='flex border-2 rounded'
-                  >
-                    <input
-                      type='text'
-                      className='px-4 py-2 w-80'
-                      placeholder='Search...'
-                      onChange={(e) => handleChange(e)}
-                      value={searchItem}
-                    />
-                    <button
-                      type='submit'
-                      onClick={search}
-                      className='flex items-center justify-center px-4 border-l'
-                    >
-                      <svg
-                        className='w-6 h-6 text-gray-600'
-                        fill='currentColor'
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 24 24'
-                      >
-                        <path d='M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z' />
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+            <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
+              <span className='block xl:inline'>Results</span>
+            </h1>
+            <Searchbar />
           </div>
         </div>
-      </div>
-      {/* RESULTS */}
-      <div className='bg-white'>
-        <div className='mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-8'>
-          <div className='space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0'>
-            <div className='lg:col-span-3'>
-              <ul
-                role='list'
-                className='space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8'
-              >
-                {data ? 
-                  data?.map((item: any, index: number) => {
-                  const { id, name, link, details, type } = item
-                  return (
-                    <Card key={`${index}${name.split('').join('')}${id}`} 
-                    name={name}
-                    link={link}
-                    details={details}
-                    />
-                  )
-                })
-                  : 
-                null}
-              </ul>
+
+        {/* <Table data={data} /> */}
+
+        <div className='relative pt-10 pb-20 px-4 sm:px-6 lg:pt-18 lg:pb-28 lg:px-8'>
+          <div className='absolute inset-0'>
+            <div className='bg-white h-1/3 sm:h-2/3' />
+          </div>
+          <div className='relative max-w-7xl mx-auto'>
+            <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
+              {data?.map((item: any) => {
+                const { name, img, details, link } = item
+                return (
+                  <a
+                    href={link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='block'
+                  >
+                    <div
+                      key={name}
+                      className='flex flex-col rounded-lg shadow-lg bg-sky-400 text-white'
+                    >
+                      <h2 className='text-center'>{name}</h2>
+                      <div className='flex-1 p-6 flex flex-col justify-between'>
+                        <div className='flex-1 flex flex-col'>
+                          <p className='text-sm font-medium  mt-auto'></p>
+                        </div>
+                        <div className='mt-3 flex items-center'>
+                          <div className='ml-3'>
+                            <p className='text-sm font-medium '>{details}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -123,54 +79,4 @@ const SearchLinks = () => {
   )
 }
 
-/* 
-      {data ? (
-        <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
-          <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
-            <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
-              <tr>
-                <th scope='col' className='px-6 py-3'>
-                  Name
-                </th>
-                <th scope='col' className='px-6 py-3'>
-                  Category
-                </th>
-                <th scope='col' className='px-6 py-3'>
-                  Details
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {data?.map((item: any, index: number) => {
-                const { id, name, link, details, type } = item
-                return (
-                  <React.Fragment key={`${index}${name.split('').join()}${id}`}>
-                  <tr
-                    className='border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700'
-                  >
-                    <th
-                      scope='row'
-                      className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'
-                    >
-                      <a
-                        href={`${link}`}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='font-medium text-blue-600 dark:text-blue-500 hover:underline'
-                      >
-                        {name}
-                      </a>
-                    </th>
-                    <td className='px-6 py-4'>{type}</td>
-                    <td className='px-6 py-4'>{details}</td>
-                  </tr>
-                  </React.Fragment>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
-      ) : // <Error />
-      null}
-*/
 export default SearchLinks
