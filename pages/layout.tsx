@@ -88,7 +88,7 @@ const Layout: NextPage = () => {
                 <div className='flex-1 flex flex-col'>
                   <p className='text-sm font-medium text-blue-600 mt-auto'>
                     <a
-                      href='https://angrytools.com/'
+                      href='https://angrytools.com/css-flex/'
                       target='_blank'
                       rel='noreferrer'
                       className='hover:underline'
