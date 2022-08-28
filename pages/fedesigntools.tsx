@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import templatemo from '/public/images/templatemo.png'
-import Renderforest from '/public/images/Renderforest.png'
+import Renderforest from '/public/images/renderforest.png'
 import invisionapp from '/public/images/invisionapp.png'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
