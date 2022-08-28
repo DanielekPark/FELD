@@ -30,6 +30,16 @@ const Nav: FC = () => {
               Image tools
             </a>
           </Link>
+          <Link href='/fedesigntools'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              Dev design
+            </a>
+          </Link>
+          <Link href='/git'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              Git
+            </a>
+          </Link>
           <Link href='/contact'>
             <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
               Contact
