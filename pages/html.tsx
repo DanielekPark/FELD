@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import htmlreference from '/public/images/htmlreference.png'
-import Tableizer from '/public/images/tableizer.png'
+import table from '/public/images/table.png'
 import htmlgen from '/public/images/htmlgen.png'
 import metatags from '/public/images/metatags.png'
 import Head from 'next/head'
@@ -18,7 +18,7 @@ const htmlTools = [
   },
   {
     name: 'Tableizer',
-    img: Tableizer,
+    img: table,
     details: 'A quick spreadsheets-to-html<table> tool. Paste cells from Excel, Google Docs, or another spreadsheet.',
     link: 'https://tableizer.journalistopia.com/',
   },
