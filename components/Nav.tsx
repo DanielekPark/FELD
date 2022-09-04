@@ -40,6 +40,11 @@ const Nav: FC = () => {
               Git
             </a>
           </Link>
+          <Link href='/html'>
+            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+              HTML
+            </a>
+          </Link>
           <Link href='/contact'>
             <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
               Contact
