@@ -1,5 +1,4 @@
 import React from 'react'
-import { randomBg } from '../utils/randomBg'
 
 type Props = {
   name: string
@@ -10,28 +9,24 @@ type Props = {
 //need to remove background gradient
 const Card: React.FC<Props> = ({ name, link, details }: Props) => {
   return (
-      <div className='space-y-4'>
-        <div
-          className='aspect-w-3 aspect-h-2'
-          style={{ background: `linear-gradient(to right, ${randomBg()})` }}
+    <div className=''>
+      <div className='p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mx-auto'>
+          <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+            {name}
+          </h5>
+        
+        <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+          {details}
+        </p>
+        <a
+          href={link}
+          className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-sky-400 rounded-lg'
+          target="_blank"
         >
-          {/* <img
-            className='object-cover shadow-lg rounded-lg'
-            src='https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80'
-            alt=''
-          /> */}
-          <div
-            className={`mx-auto h-40 w-40 xl:w-56 xl:h-56 ${randomBg()} border-black border-2`}
-          ></div>
-        </div>
-        <div className='text-lg leading-6 font-medium space-y-1 overflow-hidden'>
-          <a href={link} target='_blank' rel="noreferrer">
-            <h3>{name}</h3>
-          </a>
-          <p className='text-black-600'>{details}</p>
-        </div>
+          Try it
+        </a>
       </div>
-
+    </div>
   )
 }
 

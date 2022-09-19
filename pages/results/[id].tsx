@@ -1,15 +1,13 @@
 import type { NextPage } from 'next'
 import useSWR from 'swr'
 import React, { useState, useEffect, FC, useRef } from 'react'
-import Footer from '../../components/footer'
-import Nav from '../../components/Nav'
+
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
 import Error from '../../components/error'
 import Card from '../../components/card'
 import Searchbar from '../../components/searchbar'
-import Image from 'next/image'
-import dots from '/public/images/dots.jpeg'
+
 
 const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
@@ -43,33 +41,10 @@ const SearchLinks = () => {
           </div>
           <div className='relative max-w-7xl mx-auto'>
             <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
-              {data?.map((item: any) => {
+              {data?.map((item: any, index: number) => {
                 const { name, img, details, link } = item
                 return (
-                  <a 
-                  key={name}
-                    href={link}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='block'
-                  >
-                    <div
-                      
-                      className='flex flex-col rounded-lg shadow-lg bg-sky-400 text-white'
-                    >
-                      <h2 className='text-center'>{name}</h2>
-                      <div className='flex-1 p-6 flex flex-col justify-between'>
-                        <div className='flex-1 flex flex-col'>
-                          <p className='text-sm font-medium  mt-auto'></p>
-                        </div>
-                        <div className='mt-3 flex items-center'>
-                          <div className='ml-3'>
-                            <p className='text-sm font-medium '>{details}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
+                  <Card name={name} details={details} link={link} key={`${index}${name}`} />
                 )
               })}
             </div>
