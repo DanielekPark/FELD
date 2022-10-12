@@ -11,26 +11,26 @@ import Searchbar from '../components/searchbar'
 const imageArry = [
   {
     name: 'Remove BG',
-    img: imgcolorpicker,
+    img: removebg,
     details:
       'Visual AI tool to detect and remove backgrounds from photos, isolating the subject, creating png.',
     link: 'https://www.remove.bg/',
   },
   {
     name: 'Image Color Picker',
-    img: imgupscaler,
+    img: imgcolorpicker,
     details: 'Find the color value from a website or an image',
     link: 'https://imagecolorpicker.com/en',
   },
   {
     name: 'PicResize',
-    img: removebg,
+    img: resizeimg,
     details: 'Easily crop, resize, and edit your images online',
     link: 'https://picresize.com/',
   },
   {
     name: 'AI Image Upscaler',
-    img: resizeimg,
+    img: imgupscaler,
     details:
       'Enhance image resolution with AI. Automatically and without losing quality',
     link: 'https://icons8.com/upscaler',
@@ -39,7 +39,7 @@ const imageArry = [
 
 //PAGE TO DISPLAY LINKS TO IMAGE TOOLS
 const Images: NextPage = () => {
-  
+
   return (
     <div className={styles.container}>
       <Head>
