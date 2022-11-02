@@ -1,39 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-A directory of links to help with design, front-end, and backend development.
+Feld is a directory of links to help with design, front-end, and backend development needs. 
 
 Technologies used:
 
@@ -41,14 +6,23 @@ Technologies used:
 
 - [Next.js Documentation](https://nextjs.org/docs)
 
--[Mysql-package](https://www.npmjs.com/package/mysql)
+- [Mysql-package](https://www.npmjs.com/package/mysql)
 
--[Sql](https://www.w3schools.com/sql/)
+- [Sql](https://www.w3schools.com/sql/)
 
--[Css-Tailwind](https://tailwindcss.com/)
+- [Css-Tailwind](https://tailwindcss.com/)
 
--[Typescript](https://www.typescriptlang.org/docs/handbook/react.html)
+- [Typescript](https://www.typescriptlang.org/docs/handbook/react.html)
+
+- [Planetscale](https://planetscale.com/)
+
+- [Vercel](https://vercel.com/)
 
 ## Site
+https://feld.vercel.app/
 
-https://feld-n725ez5gj-danielekpark.vercel.app/
+## Questions?
+Feel free to contact me. If there's a link that is broken, problematic, or if you are the owner of the site, please let me know I and I will remove the links. 
+
+[daniel.ek.park@gmail.com](daniel.ek.park@gmail.com)
+[Linkedin](https://www.linkedin.com/in/daniel-park-70878119a/)
