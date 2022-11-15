@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 import UserNote from '../components/userNote'
 import Error from '../components/error'
 import Demo from '../components/demo'
-import Searchbar from '../components/searchbar'
+
 
 const Home: NextPage = () => {
 
@@ -22,51 +22,7 @@ const Home: NextPage = () => {
       <UserNote />
       {/* <Searchbar /> */}
       <Demo />
-      {/*<div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
-        <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
-          <thead className='text-xs text-gray-700 uppercase '>
-            <tr>
-              <th scope='col' className='px-6 py-3'>
-                Name
-              </th>
-              <th scope='col' className='px-6 py-3'>
-                Category
-              </th>
-              <th scope='col' className='px-6 py-3'>
-                Details
-              </th>
-            </tr>
-          </thead>
 
-          <tbody>
-            {data?.map((item: any, index: number) => {
-              const { id, name, link, details, type } = item
-              return (
-                <tr
-                  key={`${index}${name.split('').join()}${id}`}
-                  className='border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700'
-                >
-                  <th
-                    scope='row'
-                    className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'
-                  >
-                    <a
-                      href={`${link}`}
-                      target='_blank'
-                      rel="noreferrer"
-                      className='font-medium text-blue-600 dark:text-blue-500 hover:underline'
-                    >
-                      {name}
-                    </a>
-                  </th>
-                  <td className='px-6 py-4'>{type}</td>
-                  <td className='px-6 py-4'>{details}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>*/}
     </div>
   )
 }

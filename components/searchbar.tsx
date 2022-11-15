@@ -16,26 +16,26 @@ const Searchbar = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-  }   
-  
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => { 
+  }
+
+  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const input = e.currentTarget.value
     setSearchItem(input)
   }
 
   const search = () => {
-    if(searchItem.length < 1) return
+    if (searchItem.length < 1) return
 
     const encoded = encodeURIComponent(searchItem)
     router.push(
       {
         pathname: `/results/${encoded}`,
-        query: {tags: encoded}
+        query: { tags: encoded }
       },
       undefined,
-      {shallow: true}
+      { shallow: true }
     )
-  }  
+  }
 
   return (
     <>
@@ -44,9 +44,6 @@ const Searchbar = () => {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
               <div className='sm:col-span-2'>
-                {/* <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label> */}
                 <div className='flex items-center justify-center'>
                   <form
                     onSubmit={(e) => handleSubmit(e)}
