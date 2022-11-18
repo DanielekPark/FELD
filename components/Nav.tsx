@@ -13,45 +13,45 @@ const Nav: FC = () => {
     <nav className='bg-sky-400 p-6'>
       <div className='flex items-center flex-shrink-0 text-white mr-6'>
         <Link href='/'>
-          <span className='font-semibold text-xl tracking-tight cursor-pointer'>
+          <a className='font-semibold text-xl tracking-tight cursor-pointer'>
             Tool Finder
-          </span>
+          </a>
         </Link>
       </div>
 
-        <div className='mt-2 flex items-center space-x-4 overflow-y-auto whitespace-nowrap'>
-          <Link href='/layout'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              Layout
-            </a>
-          </Link>
-          <Link href='/image'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              Image tools
-            </a>
-          </Link>
-          <Link href='/fedesigntools'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              Dev design
-            </a>
-          </Link>
-          <Link href='/git'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              Git
-            </a>
-          </Link>
-          <Link href='/html'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              HTML
-            </a>
-          </Link>
-          <Link href='/contact'>
-            <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
-              Contact
-            </a>
-          </Link>
+      <div className='mt-2 flex items-center space-x-4 overflow-y-auto whitespace-nowrap'>
+        <Link href='/layout'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            Layout
+          </a>
+        </Link>
+        <Link href='/image'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            Image tools
+          </a>
+        </Link>
+        <Link href='/fedesigntools'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            Dev design
+          </a>
+        </Link>
+        <Link href='/git'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            Git
+          </a>
+        </Link>
+        <Link href='/html'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            HTML
+          </a>
+        </Link>
+        <Link href='/contact'>
+          <a className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+            Contact
+          </a>
+        </Link>
 
-        </div>
+      </div>
     </nav>
   )
 }
