@@ -1,10 +1,4 @@
-import type { NextPage } from 'next'
-import useSWR from 'swr'
-import { fetcher } from '../utils/fetcher'
 import React, { useState, useEffect, FC, useRef } from 'react'
-import Footer from './footer'
-import Error from './error'
-import Nav from './Nav'
 import { useRouter } from 'next/router'
 
 const Searchbar = () => {

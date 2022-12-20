@@ -1,19 +1,14 @@
-import type { NextPage } from 'next'
 import useSWR from 'swr'
 import React, { useState, useEffect, FC, useRef } from 'react'
-
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
-import Error from '../../components/error'
 import Card from '../../components/card'
 import Searchbar from '../../components/searchbar'
 
 
 const SearchLinks = () => {
-  const [searchItem, setSearchItem] = useState<string>('')
-  const [results, setResults] = useState<any[]>([])
   const router = useRouter()
-  const { query, asPath } = router
+  const { query } = router
   const { id } = query
 
   const { data, error } = useSWR(`/api/results/${id}`, fetcher)
@@ -33,14 +28,12 @@ const SearchLinks = () => {
           </div>
         </div>
 
-        {/* <Table data={data} /> */}
-
         <div className='relative pt-10 pb-20 px-4 sm:px-6 lg:pt-18 lg:pb-28 lg:px-8'>
           <div className='absolute inset-0'>
             <div className='bg-white h-1/3 sm:h-2/3' />
           </div>
           <div className='relative max-w-7xl mx-auto'>
-            <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
+            <div className='mt-12 max-w-lg mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:max-w-none'>
               {data?.map((item: any, index: number) => {
                 const { name, img, details, link } = item
                 return (

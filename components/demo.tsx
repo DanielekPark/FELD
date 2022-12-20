@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Image from 'next/image'
 import dots from '/public/images/dots.jpeg'
 
@@ -44,17 +43,17 @@ export default function Demo() {
               <div className='mt-3 flex items-center'>
                 <div className='ml-3'>
                   <p className='text-sm font-medium text-gray-900'>
-                    This example shown is not an SVG, its HTML and CSS. Clippy is a tool for generating values for shape functions for the new and cool CSS clip-path property. 
+                    This example shown is not an SVG, its HTML and CSS. Clippy is a tool for generating values for shape functions for the new and cool CSS clip-path property.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
             {/* relative */}
             <div className='flex-shrink-0 mx-auto flip'>
-                <Image src={dots} alt="pattern" width={150} height={150} />
+              <Image src={dots} alt="pattern" width={150} height={150} />
             </div>
             <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
               <div className='flex-1 flex flex-col'>

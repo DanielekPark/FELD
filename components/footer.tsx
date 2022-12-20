@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import React, { FC } from 'react'
 
 const Footer: FC = () => {
