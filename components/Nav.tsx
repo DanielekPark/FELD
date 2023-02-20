@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { FC, ReactElement } from 'react'
+import React, { FC } from 'react'
 
 const Nav: FC = () => {
   return (

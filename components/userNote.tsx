@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import React, { FC, Fragment } from 'react'
 import Searchbar from './searchbar'
 

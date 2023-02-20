@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const mysql = require('mysql')
 
 export default function handler(req: any, res: any) {
@@ -31,9 +30,8 @@ export default function handler(req: any, res: any) {
     connection.query(
       `SELECT * FROM links WHERE tags like ${searchTags}`,
       function (err: any, result: any, fields: any) {
-        console.log('search results:', searchTags)
+        // console.log('search results:', searchTags)
         if (err) throw err
-        console.log(searchTags)
         res.status(200).json(result)
       }
     )
