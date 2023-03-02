@@ -5,7 +5,7 @@ Technologies used:
 
 - [React](https://reactjs.org/docs/getting-started.html)
 
-- [Next.js Documentation](https://nextjs.org/docs)
+- [Next.js](https://nextjs.org/docs)
 
 - [Mysql-package](https://www.npmjs.com/package/mysql)
 
