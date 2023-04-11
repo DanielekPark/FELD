@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import dots from '/public/images/dots.jpeg'
 
+//home page demo links
 export default function Demo() {
   return (
     <div className='relative pt-10 pb-20 px-4 sm:px-6 lg:pt-18 lg:pb-28 lg:px-8'>
@@ -14,7 +15,6 @@ export default function Demo() {
           </h2>
         </div>
         <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
-
           <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
             <div className='flex justify-around mt-2'>
               <div className='flex-shrink-0'>
@@ -52,7 +52,7 @@ export default function Demo() {
 
           <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
             {/* relative */}
-            <div className='flex-shrink-0 mx-auto flip'>
+            <div className='flex-shrink-0 mx-auto swirl-in-fwd cursor-pointer'>
               <Image src={dots} alt="pattern" width={150} height={150} />
             </div>
             <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
@@ -64,15 +64,19 @@ export default function Demo() {
                     rel='noreferrer'
                     className='hover:underline'
                   >
-                    Try it
+                    Try it 
                   </a>
+                  
                 </p>
               </div>
               {/* absolute */}
               <div className='mt-3 flex items-center'>
                 <div className='ml-3'>
+                  <p className='text-sm font-medium text-gray-900 mb-2'>
+                    HOVER OVER THE IMAGE
+                  </p>
                   <p className='text-sm font-medium text-gray-900'>
-                    PLACE WHERE YOU CAN PLAY WITH A COLLECTION OF PRE-MADE CSS ANIMATIONS. You will be able to see how they affect the animation on the spot.
+                    Place where you can play with a collection of pre-made CSS animations. You will be able to see how they affect the animation on the spot.
                   </p>
                 </div>
               </div>
@@ -132,7 +136,6 @@ export default function Demo() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
