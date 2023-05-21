@@ -1,12 +1,9 @@
-import React, { useState, useEffect, FC, useRef } from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 
 const Searchbar = () => {
   const [searchItem, setSearchItem] = useState<string>('')
-  const [results, setResults] = useState<any[]>([])
   const router = useRouter()
-  const { query } = router
-  const { id } = query
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()

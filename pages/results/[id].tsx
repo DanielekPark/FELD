@@ -1,11 +1,11 @@
 import useSWR from 'swr'
-import React, { useState, useEffect, FC, useRef } from 'react'
+import React from 'react'
 import { useRouter } from 'next/router'
 import { fetcher } from '../../utils/fetcher'
 import Card from '../../components/card'
 import Searchbar from '../../components/searchbar'
 
-
+//SEARCH RESULTS PAGE
 const SearchLinks = () => {
   const router = useRouter()
   const { query } = router
