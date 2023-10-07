@@ -10,7 +10,6 @@ import Card from '../components/card'
 
 const SearchLinks = () => {
   const [searchItem, setSearchItem] = useState<string>('')
-  const [results, setResults] = useState<any[]>([])
   const router = useRouter()
   const { query } = router
   const { id } = query
@@ -51,9 +50,7 @@ const SearchLinks = () => {
           <div className='mt-12'>
             <div className='grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
               <div className='sm:col-span-2'>
-                {/* <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label> */}
+
                 <div className='flex items-center justify-center'>
                   <form
                     onSubmit={(e) => handleSubmit(e)}

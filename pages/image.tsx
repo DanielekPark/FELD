@@ -7,6 +7,7 @@ import resizeimg from '/public/images/resizeimg.png'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Searchbar from '../components/searchbar'
+import Link from 'next/link'
 
 const imageArry = [
   {
@@ -88,14 +89,17 @@ const Images: NextPage = () => {
                   <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
                     <div className='flex-1 flex flex-col'>
                       <p className='text-sm font-medium text-blue-600 mt-auto'>
-                        <a
+                        <Link
                           href={link}
+                        >
+                        <a
                           target='_blank'
                           rel='noreferrer'
                           className='hover:underline'
                         >
                           Try it
                         </a>
+                        </Link>
                       </p>
                     </div>
                     {/* absolute */}
