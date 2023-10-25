@@ -18,7 +18,6 @@ const Card: React.FC<Props> = ({ name, link, details }: Props) => {
       </p>
       <Link
         href={link}
-        legacyBehavior
         className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-sky-400 rounded-lg"
         target="_blank"
         rel="noreferrer"
