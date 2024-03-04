@@ -9,20 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "dotenv": "^16.0.0",
     "mysql": "^2.18.1",
-    "next": "^13.4.19",
+    "next": "^14.1.0",
+    "pg": "^8.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
+    "@types/pg": "^8.11.2",
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",
-    "eslint-config-next": "^13.4.19",
+    "eslint-config-next": "^14.1.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23",
     "typescript": "4.6.3"
