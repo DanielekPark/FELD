@@ -1,17 +1,17 @@
-const mysql = require('mysql');
+const { Client } = require("pg");
 
-export default function handler(req: any, res: any) {
-const connection = mysql.createConnection(process.env.DATABASE_URL);
-// console.log('Connected to PlanetScale!');
+const client = new Client(process.env.DATABASE_URL);
 
-  connection.connect(function(err: any) {
-    if (err) throw err;
-    connection.query("SELECT * FROM links WHERE id < 15", function (err: any, result: any, fields: any) {
-      if (err) throw err;
-      // console.log(result);
-      res.status(200).json(result)
-    });
-  });  
- 
-  // connection.end();
+export default async function handler (req: any, res: any) {
+  await client.connect();
+  try {
+    const results = await client.query(`SELECT name, link, details from links where tags like '%toggle%'`);
+    res.status(200).json(results)
+    console.log(results)
+  } catch (err) {
+    console.error("error executing query:", err);
+  } finally{
+    await client.end() 
+  }
+  
 }

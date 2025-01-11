@@ -27,13 +27,13 @@ Technologies used:
    cd feld
    ```
 
-1. Install dependencies
+2. Install dependencies
 
    ```sh
    npm install
    ```
 
-1. Run the server
+3. Run the server
 
    ```sh
    npm run dev
@@ -52,7 +52,3 @@ Feel free to contact me. If there's a link that is broken, problematic, or if yo
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](daniel.ek.park@gmail.com)
 [![Linkedin](https://img.shields.io/badge/Linkedin-Linkedin%20-blue)](https://www.linkedin.com/in/daniel-park-70878119a/)
-
-
-
-
